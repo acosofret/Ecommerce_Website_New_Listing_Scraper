@@ -2,9 +2,9 @@
 from bs4 import BeautifulSoup
 import requests
 
-nike_mens_shoes = "https://www.nike.com/w/mens-shoes-nik1zy7ok"
-nike_womens_shoes = "https://www.nike.com/w/womens-shoes-5e1x6zy7ok"
-nike_kids_shoes = "https://www.nike.com/w/kids-shoes-v4dhzy7ok"
+nike_mens_shoes = "https://www.nike.com/w/mens-shoes-nik1zy7ok?sort=newest"
+nike_womens_shoes = "https://www.nike.com/w/womens-shoes-5e1x6zy7ok?sort=newest"
+nike_kids_shoes = "https://www.nike.com/w/kids-shoes-v4dhzy7ok?sort=newest"
 
 response = requests.get(nike_mens_shoes)
 
@@ -20,5 +20,3 @@ for card in product_cards:
 
 for product_info in product_info_list:
 	print(product_info)
-# products = soup.select("li ul li h3")
-# song_names = [song.getText().strip() for song in song_names_spans]
